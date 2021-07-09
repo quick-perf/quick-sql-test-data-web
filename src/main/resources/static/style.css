@@ -1,0 +1,53 @@
+body {
+    background: black;
+}
+
+#container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    border-radius: 6px;
+}
+
+img  {
+    border-radius: 6px;
+}
+
+#requestField {
+    border-radius: 6px;
+    background: #30363d;
+    color: #d1d9e1;
+    margin: 1px;
+}
+
+#clickButton {
+    background: #0c2d6b;
+    color: #58a6ff;
+    border-radius: 6px;
+    border: none;
+    margin: 1px;
+}
+
+#clickButton:hover {
+    background:#30363d;
+    color: #58a6ff;
+    border-color: #58a6ff;
+}
+
+#historyTable {
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    /*border: solid white;*/
+    background: #30363d;
+    color: #d1d9e1;
+    padding: 5px;
+    border-radius: 6px;
+    margin: 5px;
+}

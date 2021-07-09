@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/default.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/sql.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<div id="container">
+    <input id="requestField" name="request" placeholder="SELECT LAST_NAME FROM GUITARHERO" required
+           type="text">
+    <button id="clickButton" onclick="loadDoc()" type="button">Generate</button>
+
+    <div id="historyTable">
+        <pre class="sql" id="feedBack">
+            <code id="code">
+
+            </code>
+        </pre>
+    </div>
+
+</div>
+</body>
+<script>
+    function loadDoc() {
+        let xhttp = new XMLHttpRequest();
+        let queryArgument = document.getElementById("requestField").value;
+        console.log(queryArgument);
+        const url = "v0/api/request";
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                let tr = document.createElement("div");
+                tr.setAttribute("class", "row")
+                let input = document.createElement("div");
+                input.setAttribute("class", "cell");
+                input.innerHTML = queryArgument;
+                let outPut = document.createElement("div");
+                outPut.setAttribute("class", "cell");
+                outPut.innerHTML = this.responseText;
+                document.getElementById("code").append(tr);
+                tr.append(input);
+                tr.append(outPut);
+            }
+        };
+        xhttp.open("GET", url + "?query=" + queryArgument, true);
+        xhttp.send();
+    }
+</script>
+
+</html>
