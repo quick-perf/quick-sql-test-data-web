@@ -1,6 +1,6 @@
 # _Web_ SQL test data generator
 
-This project provides a web page for the [_SQL test data generator_ library](https://github.com/quick-perf/sql-test-data-generator)
+This project provides a web page to ease the use of the [_SQL test data generator_ library](https://github.com/quick-perf/sql-test-data-generator).
 
 ![web page](./web-page-screenshot.jpg)
 
