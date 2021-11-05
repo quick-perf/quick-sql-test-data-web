@@ -13,7 +13,7 @@
 package com.sqltestdataapi.services;
 
 import org.springframework.stereotype.Service;
-import org.stdg.SqlTestDataGenerator;
+import org.qstd.QuickSqlTestData;
 
 import javax.sql.DataSource;
 
@@ -27,8 +27,8 @@ public class TestDataGeneratorService {
     }
 
     public String generateTestQuery(String query) {
-        SqlTestDataGenerator sqlTestDataGenerator = SqlTestDataGenerator.buildFrom(dataSource);
-        String insertScript = sqlTestDataGenerator.generateInsertScriptFor(query);
+        QuickSqlTestData quickSqlTestData = QuickSqlTestData.buildFrom(dataSource);
+        String insertScript = quickSqlTestData.generateInsertScriptFor(query);
         return insertScript;
     }
 

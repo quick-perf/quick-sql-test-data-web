@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.quickperf</groupId>
-    <artifactId>web-sql-test-data-generator</artifactId>
+    <artifactId>quick-sql-test-data-web</artifactId>
     <version>0.1-SNAPSHOT</version>
-    <name>Web SQL test data generator</name>
-    <description>Web SQL test data generator</description>
+    <name>Web interface for Quick SQL test data</name>
+    <description>Web interface for Quick SQL test data library</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -62,7 +62,7 @@
 
         <dependency>
             <groupId>org.quickperf</groupId>
-            <artifactId>sql-test-data-generator</artifactId>
+            <artifactId>quick-sql-test-data</artifactId>
             <version>0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
