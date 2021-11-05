@@ -39,7 +39,6 @@ public class QueryControllerTest {
 
     @Test
     public void should_receive_a_query() throws Exception {
-        // mockMvc.perform(get("http://localhost:" + port + "/v0/api/request?query=INSERT%20INTO%20GuitarHero%20VALUES%20(1,%20%27Tosin%27,%20%27Abasi%27)"))
         mockMvc.perform(get("http://localhost:" + port + "/v0/api/request?query=SELECT%20*%20FROM%20GuitarHero"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("INSERT")));
